@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 function Delete2() {
   const [studentData, setStudentData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(5);
+  const [itemsPerPage] = useState(3);
   const navigate = useNavigate();
 
   useEffect(() => {

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // import db from './db';
 import { useNavigate } from "react-router-dom";
+import validation from './SignupValidation';
 
 export default function Concert() {
   const navigate = useNavigate();
@@ -10,10 +11,14 @@ export default function Concert() {
     username: "",
     password: "",
   });
+  const [errors, setErrors] = useState({});
+
  
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    const err=validation(values);
+    setErrors(err)
+    if(err.name==="" && err.email==="" && err.password===""){
     fetch("http://localhost:8081/Create", {
       method: "POST",
       headers: {
@@ -38,6 +43,7 @@ export default function Concert() {
       .catch((error) => {
         console.error("Error:", error);
       });
+    }
   };
 
   const handleInput = (event) => {
@@ -72,6 +78,8 @@ export default function Concert() {
                     id="Concert_Name"
                     placeholder="Enter Students Name"
                   />
+                                {errors.name && <span className='text-danger'>{errors.name}</span>}
+
                 </th>
               </tr>
               <tr>
@@ -92,6 +100,7 @@ export default function Concert() {
                     id="Team_Name"
                     placeholder="Enter Email"
                   />
+                  {errors.email && <span className='text-danger'>{errors.email}</span>}
                 </th>
               </tr>
               <tr>
@@ -112,6 +121,8 @@ export default function Concert() {
                     id="Ticket_Fee"
                     placeholder="Username"
                   />
+                                {errors.name && <span className='text-danger'>{errors.name}</span>}
+
                 </th>
               </tr>
               <tr>
@@ -133,6 +144,8 @@ export default function Concert() {
                     id="date"
                     placeholder="Enter Password"
                   />
+                                {errors.password && <span className='text-danger'>{errors.password==="Password Invalid"?errors.password+" or username invalid":errors.password}</span>}
+
                 </th>
               </tr>
             </thead>

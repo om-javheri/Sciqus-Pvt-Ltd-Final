@@ -13,6 +13,7 @@ import ShowAndId from './components/ShowAndId';
 import ShowAndDelete from './components/ShowAndDelete';
  import NavbarLimit from './components/NavbarLimit';
 import IndividualStudent from './components/IndividualStudent';
+import Show from './components/Show';
  document.body.style.backgroundColor='white'
 
 export default function App() {
@@ -44,6 +45,8 @@ export default function App() {
     <div className="container my-3"  >
     <Routes>
        <Route exact path="/" element={<Textform  loginStatus={loginStatus} setloginStatus={setloginStatus} />}/>
+       <Route exact path="/Show" element={<Show/>}/>
+
  <Route exact path="/Create" element={<Create/>}/>
  <Route exact path="/Edit2" element={<Edit2/>}/>
  <Route path="/Created" element={<Created/>}/>

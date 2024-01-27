@@ -1,14 +1,16 @@
 export default function validation(values){
     let error={}
     const email_pattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    const password_pattern=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/
-
+    const password_pattern=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]).{8,}$/;
+if(values.name){
+    error.name="Name should not be empty"
+}
     if(values.email===""){
-        error.email="Name should not be empty"
+        error.email="Email should not be empty"
     }
     else if(!email_pattern.test(values.email)){
 
-        error.email="Email Didn't match"
+        error.email="Email Format: xyz@gmail.com"
     }
     else{
         error.email=""
@@ -17,8 +19,8 @@ export default function validation(values){
         error.password="Password should not be empty"
     }
     else if(!password_pattern.test(values.password)){
-console.log(values.password[6])
-        error.password="Password Invalid"
+
+        error.password="Include Special character(@,&), lower case, upper case,more than 8 digits"
     }
     else{
         error.password=""

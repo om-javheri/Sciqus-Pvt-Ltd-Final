@@ -25,9 +25,10 @@ export default function Created() {
   return (
     <>
 
-      <h2>New Student added</h2>
-      <div>
-  <table className="table">
+      
+      <div className='text-center center2'>
+      <h2 className='colorw'>New Student added</h2>
+  <table className="table2">
     <thead>
       <tr>
         <th>Student ID</th>
@@ -37,7 +38,7 @@ export default function Created() {
        
       </tr>
     </thead>
-    <tbody>
+    <tbody className='tbody'>
       {studentData.map((student, index) => (
         <tr key={index}>
           <td>{student.id}</td>

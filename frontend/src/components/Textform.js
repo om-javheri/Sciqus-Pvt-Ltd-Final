@@ -102,13 +102,13 @@ if(err.name==="" && err.email==="" && err.password===""){
               // setIsLog("true");
               setloginStatus(true)
               console.log("admin")
-              navigate('/ShowAndBook');
+              navigate('/Show');
           } else {
               // If not admin, redirect to regular user page
               // setIsLog("true");
               setloginStatus(false)
 
-              navigate('/ShowAndBook');
+              navigate('/Show');
           }
         
           
@@ -126,8 +126,10 @@ if(err.name==="" && err.email==="" && err.password===""){
   const handleInputL = (event) => {
     setValues((prev) => ({ ...prev, [event.target.name]: event.target.value }));
   };
-
-
+const [forget,setForget]=useState(false)
+const handleForget=()=>{
+setForget(true)
+}
 
 
   return (
@@ -182,7 +184,9 @@ if(err.name==="" && err.email==="" && err.password===""){
               {errors.password && <span className='text-danger'>{errors.password==="Password Invalid"?errors.password+" or username invalid":errors.password}</span>}
             </div>
             <button type="submit" onClick={handleSubmitL} className='btn btn-success ' >Log in</button>
-            <p  href='#' className='FP'>Forget Password</p>
+            {forget?<input className='mt-3' type='email' placeholder='Enter Email'/>:<span></span>}
+            <a  onClick={handleForget} className='FP'>{forget?<button>Send OTP</button>:"Forget Password"}</a>
+
             
             
           </form>
