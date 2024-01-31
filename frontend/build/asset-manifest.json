@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.f1342f0b.js",
-    "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
-    "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.f1342f0b.js.map": "/static/js/main.f1342f0b.js.map",
-    "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
+    "main.css": "/om-javheri/Sciqus-Student-Management-System-Frontend-Backend/frontend/static/css/main.75c43343.css",
+    "main.js": "/om-javheri/Sciqus-Student-Management-System-Frontend-Backend/frontend/static/js/main.2b316cc1.js",
+    "static/js/787.cda612ba.chunk.js": "/om-javheri/Sciqus-Student-Management-System-Frontend-Backend/frontend/static/js/787.cda612ba.chunk.js",
+    "static/media/bg.jpg": "/om-javheri/Sciqus-Student-Management-System-Frontend-Backend/frontend/static/media/bg.a7ffe8044a37b86ae616.jpg",
+    "index.html": "/om-javheri/Sciqus-Student-Management-System-Frontend-Backend/frontend/index.html",
+    "main.75c43343.css.map": "/om-javheri/Sciqus-Student-Management-System-Frontend-Backend/frontend/static/css/main.75c43343.css.map",
+    "main.2b316cc1.js.map": "/om-javheri/Sciqus-Student-Management-System-Frontend-Backend/frontend/static/js/main.2b316cc1.js.map",
+    "787.cda612ba.chunk.js.map": "/om-javheri/Sciqus-Student-Management-System-Frontend-Backend/frontend/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.f1342f0b.js"
+    "static/css/main.75c43343.css",
+    "static/js/main.2b316cc1.js"
   ]
 }
